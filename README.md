@@ -1,5 +1,23 @@
-##My Portfolio
-I used HTML,Tailwind and JavaScript to Create this page...
+# 🚀 Indhra Kumar Portfolio
 
+Modern responsive portfolio website built using HTML, Tailwind CSS and JavaScript.
 
-#Live demo https://indhrakumar.github.io/indhar
+## 🌐 Live Demo
+https://indhrakumar.github.io/portfolio
+
+## ✨ Features
+- Responsive Design
+- Neon UI
+- Animated Timeline
+- Circular Skill Progress
+- Smooth Animations
+
+## 🛠 Technologies
+- HTML5
+- Tailwind CSS
+- JavaScript
+- Font Awesome
+
+## 👨‍💻 Author
+Indhra Kumar
+
