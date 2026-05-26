@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In and Register</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <style>
+      .custom-scroll::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      .custom-scroll::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .custom-scroll::-webkit-scrollbar-thumb {
+        background-color: #22c55e;
+        border-radius: 10px;
+      }
+
+      .custom-scroll::-webkit-scrollbar-thumb:hover {
+        background-color: #16a34a;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-black relative">
+    <div
+      class="absolute top-0 min-h-screen bg-black w-full z-[9999] flex overflow-hidden">
+      <div class="absolute left-2 p-3">
+        <a
+          href="foodOrder.html"
+          class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400 text-xl cursor-pointer"
+          ><i class="bi bi-house text-2xl"></i> Home</a
+        >
+      </div>
+      <div
+        class="text-6xl text-center mx-auto my-auto text-yellow-400 -rotate-20"
+        style="text-shadow: 0 0 80px">
+        Designing in Progress
+      </div>
+    </div>
+    <div
+      class="flex bg-gray-950/80 h-full items-center justify-between px-3 py-4 border-b-1 border-black sticky top-0 z-10 backdrop-blur-lg shadow-md rleative">
+      <!--logo-->
+      <div
+        class="cursor-pointer mx-auto group flex gap-1 text-3xl md:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400">
+        <div
+          class="group-hover:-translate-y-3 transition-all duration-500 group-hover:text-red-500 ease-in-out">
+          Foods
+        </div>
+        <div class="text-indigo-400">&</div>
+        <div
+          class="group-hover:translate-y-3 transition-all duration-500 group-hover:text-yellow-500 ease-in-out">
+          Snacks
+        </div>
+      </div>
+      <div class="absolute left-0 p-3">
+        <a
+          href="foodOrder.html"
+          class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400 text-xl cursor-pointer"
+          ><i class="bi bi-house text-2xl"></i> Home</a
+        >
+      </div>
+    </div>
+    <div class="h-[100%] flex justify-center bg-slate-800">
+      <!--log,reg,forget container-->
+
+      <div
+        class="w-120 h-100 bg-gray-900 overflow-hidden relative border-r-1 border-slate-300/10 rounded-s-2xl my-auto">
+        <div
+          class="flex justify-center items-center mx-auto w-full h-10 border-1 border-black bg-gray-900">
+          <div class="border-1 border-black rounded-full h-full">
+            <button
+              onclick="showLogin()"
+              id="loginBtn"
+              class="text-red-500 cursor-pointer w-20 h-full rounded-l-full bg-gray-300 active hover:bg-black">
+              Login
+            </button>
+            <button
+              onclick="showRegister()"
+              id="registerBtn"
+              class="cursor-pointer text-red-500 w-20 h-full rounded-r-full bg-gray-900 hover:bg-black">
+              Register
+            </button>
+          </div>
+        </div>
+        <!--siding container-->
+        <div
+          id="slider"
+          class="grid grid-cols-3 w-[300%] h-[100%] translate-x-[-33%] transition-all duration-500 relative">
+          <!--forget-->
+          <div class="w-full p-5">
+            <h2 class="text-2xl font-bold text-center text-yellow-600">
+              Recover Password
+            </h2>
+            <input
+              type="text"
+              placeholder="Email"
+              class="border w-full mt-3 p-2 outline-none border-1 border-yellow-600 rounded-lg focus:ring-1 focus:ring-red-yellow text-sm text-yellow-500 mb-3" />
+
+            <div class="flex justify-center items-end h-8 w-full">
+              <button
+                class="h-full w-70 cursor-pointer rounded-lg bg-yellow-500/60 hover:bg-yellow-500 transition-colors duration-200 font-semibold text-white uppercase tracking-wider">
+                Send Link
+              </button>
+            </div>
+          </div>
+          <!--login page-->
+          <div class="w-full p-5">
+            <h2 class="text-2xl font-bold text-center text-red-600">Login</h2>
+            <input
+              type="text"
+              placeholder="Email"
+              class="border w-full mt-3 p-2 outline-none border-1 border-red-600 rounded-lg focus:ring-1 focus:ring-red-400 text-sm text-red-500" />
+            <input
+              type="password"
+              placeholder="Password"
+              class="border w-full mt-3 mb-2 p-2 outline-none border-1 border-red-600 rounded-lg focus:ring-1 focus:ring-red-400 text-sm text-red-500" />
+            <div class="flex text-sm mb-3">
+              <button
+                onclick="forget()"
+                class="mx-auto text-red-600 cursor-pointer">
+                Forget Password?
+              </button>
+            </div>
+            <div class="flex gap-1 items-center mb-4">
+              <input type="checkbox" />
+              <label for="" class="text-sm text-red-600">Remember me</label>
+            </div>
+            <div class="flex justify-center items-end h-8 w-full">
+              <button
+                class="h-full w-70 cursor-pointer rounded-lg bg-red-500/60 hover:bg-red-500 transition-colors duration-200 font-semibold text-white uppercase tracking-wider">
+                Login
+              </button>
+            </div>
+          </div>
+
+          <!--register-->
+          <div
+            class="w-full p-5 min-w-50 overflow-y-scroll custom-scroll mb-10">
+            <h2 class="text-2xl font-bold text-center text-green-600">
+              Create Account
+            </h2>
+            <input
+              type="text"
+              placeholder="Email"
+              class="border w-full mt-3 p-2 outline-none border-1 border-green-600 rounded-lg focus:ring-1 focus:ring-green-400 text-sm text-green-500" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+              <input
+                type="text"
+                placeholder="First Name"
+                class="border w-full mt-3 p-2 outline-none border-1 border-green-600 rounded-lg focus:ring-1 focus:ring-green-400 text-sm text-green-500" />
+              <input
+                type="text"
+                placeholder="Last Name"
+                class="border w-full mt-3 p-2 outline-none border-1 border-green-600 rounded-lg focus:ring-1 focus:ring-green-400 text-sm text-green-500" />
+
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="border w-full p-2 outline-none border-1 border-green-600 rounded-lg focus:ring-1 focus:ring-green-400 text-sm text-green-500" />
+              <input
+                type="password"
+                placeholder="Password"
+                class="border w-full p-2 outline-none border-1 border-green-600 rounded-lg focus:ring-1 focus:ring-green-400 text-sm text-green-500" />
+            </div>
+            <div class="flex gap-1 items-center mb-3">
+              <input type="checkbox" />
+              <label for="" class="text-sm text-green-600"
+                >Agree the Term and services</label
+              >
+            </div>
+
+            <div class="flex justify-center items-end h-8 w-full">
+              <button
+                class="h-full w-70 cursor-pointer rounded-lg bg-green-500/60 hover:bg-green-500 transition-colors duration-200 font-semibold text-white uppercase tracking-wider">
+                Create
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-900 w-1/2 translate-x-[100%] h-full absolute hidden transition-all duration-500"
+            id="screen"></div>
+        </div>
+      </div>
+
+      <div
+        class="w-120 h-100 my-auto bg-[url('./images/biriyani.avif')] bg-cover overflow-hidden relative rounded-e-2xl">
+        <div class="backdrop-blur-lg opacity-90">
+          <h2
+            class="headinglog text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400 justify-center">
+            Hii welcome back
+          </h2>
+          <h2
+            class="headingreg hidden text-green-500 text-3xl font-bold uppercase text-center justify-center">
+            Greetings
+          </h2>
+        </div>
+        <div class="absolute h-full w-full bg-black/30 backdrop-blur-sm">
+          <div class="flex flex-col gap-3 mx-2 mt-4">
+            <div class="flex h-30">
+              <div
+                class="border-1 border-slate-900 h-full w-2/4 rounded-s-3xl overflow-hidden">
+                <img
+                  src="./images/biriyani.avif"
+                  alt=""
+                  class="h-full object-cover object-center w-full" />
+              </div>
+              <div
+                class="border-1 border-slate-900 h-full w-full rounded-e-3xl overflow-hidden ps-4 pt-0 pe-2 text-orange-600 font-semibold text-[10px] sm:text-sm md:text-md bg-slate-900/20">
+                <p>Ready to order your favorite food?</p>
+                <ul class="text-[10px] sm:text-xs md:text-sm text-yellow-500">
+                  <li>Explore delicious meals</li>
+                  <li>Fresh drinks & snacks</li>
+                  <li>Special offers for new users 🎁</li>
+                </ul>
+                <p class="text-[11px] sm:text-sm md:text-md mt-2 text-blue-300">
+                  Login and start ordering now!
+                </p>
+              </div>
+            </div>
+            <div class="flex h-30">
+              <div
+                class="border-1 border-slate-900 h-full w-2/4 rounded-s-3xl overflow-hidden">
+                <img
+                  src="./images/fs.avif"
+                  alt=""
+                  class="h-full object-cover object-center w-full" />
+              </div>
+              <div
+                class="border-1 border-slate-900 h-full w-full rounded-e-3xl overflow-hidden ps-4 pt-0 pe-2 text-orange-600 font-semibold text-[10px] sm:text-sm md:text-md bg-slate-900/20">
+                <p>Order your food</p>
+                <ul class="text-[10px] sm:text-xs md:text-sm text-yellow-500">
+                  <li>We deliver the food quickly on Time</li>
+                  <li>Track your Order</li>
+                  <li>Free delivery</li>
+                </ul>
+                <p class="text-[11px] sm:text-xs md:text-xs mt-2 text-blue-300">
+                  Join with us by registering and start ordering now!
+                </p>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let slider = document.getElementById("slider");
+      let loginBtn = document.getElementById("loginBtn");
+      let registerBtn = document.getElementById("registerBtn");
+      let headinglog = document.querySelector(".headinglog");
+      let headingreg = document.querySelector(".headingreg");
+
+      function showRegister() {
+        slider.style.transform = "translateX(-33%)";
+        headinglog.classList.add("hidden");
+        headingreg.classList.remove("hidden");
+        registerBtn.classList.remove("bg-gray-900");
+        registerBtn.classList.add("bg-white");
+        loginBtn.classList.remove("bg-white");
+        loginBtn.classList.add("bg-gray-900");
+        loginBtn.style.color = "green";
+        registerBtn.style.color = "green";
+      }
+
+      function showLogin() {
+        slider.style.transform = "translateX(0%)";
+        headinglog.classList.remove("hidden");
+        headingreg.classList.add("hidden");
+        loginBtn.classList.remove("bg-gray-900");
+        loginBtn.classList.add("bg-white");
+        registerBtn.classList.remove("bg-white");
+        registerBtn.classList.add("bg-gray-900");
+        loginBtn.style.color = "red";
+        registerBtn.style.color = "red";
+      }
+      function forget() {
+        slider.style.transform = "translateX(33%)";
+        loginBtn.classList.remove("bg-white");
+        loginBtn.classList.add("bg-gray-900");
+
+        loginBtn.style.color = "white";
+        registerBtn.style.color = "white";
+      }
+    </script>
+  </body>
+</html>

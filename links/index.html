@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulls & Cows Game</title>
+    <style>
+      body {
+        font-family: Arial;
+        background: #0f172a;
+        color: white;
+        padding: 20px;
+        position: relative;
+      }
+      h1 {
+        font-size: 45px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      p {
+        margin: 0 auto;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 30px;
+      }
+      input,
+      button {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        border: none;
+      }
+      button {
+        background: cyan;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .card {
+        background: #1e293b;
+        margin: 10px auto;
+        padding: 10px;
+        width: 250px;
+        border-radius: 10px;
+      }
+      .ans-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ans-container input {
+        width: 30%;
+      }
+      #toast {
+        display: none;
+        width: 50px;
+        padding: 4px 8px;
+        position: absolute;
+        top: 10px;
+        right: 45%;
+        color: white;
+        background-color: black;
+        border-radius: 25px;
+      }
+      @media (max-width: 550px) {
+        h1 {
+          font-size: 50px;
+        }
+        .container {
+          margin-top: 100px;
+        }
+        .ans-container input {
+          width: 100%;
+        }
+        #toast {
+          top: 50px;
+        }
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="toast"></div>
+    <div class="container">
+      <h1>Bulls & Cows Game</h1>
+      <p>Guess 4-digit number (no repeat)</p>
+
+      <div class="ans-container">
+        <input type="text" id="guess" placeholder="Enter 4 digits" />
+        <button id="check">Check</button>
+        <button onclick="ans()">Ans</button>
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      let secret = generateNumber();
+      let checkans = document.getElementById("check");
+      let attempts = 0;
+      checkans.addEventListener("click", check);
+      guess.addEventListener("keydown", (e) => {
+        if (e.key == "Enter") {
+          check();
+        }
+      });
+      function ans() {
+        let div = document.getElementById("toast");
+        div.style.display = "block";
+        div.innerHTML = secret.join(" ");
+        setTimeout(() => {
+          div.style.display = "none";
+        }, 2000);
+
+        console.log(secret);
+      }
+      function generateNumber() {
+        let digits = "0123456789".split("");
+        digits.sort(() => Math.random() - 0.5);
+        return digits.slice(0, 4);
+      }
+
+      function check() {
+        let guess = document.getElementById("guess").value;
+
+        if (guess.length !== 4 || new Set(guess).size !== 4) {
+          alert("Enter 4 unique digits!");
+          return;
+        }
+
+        attempts++;
+
+        let bulls = 0;
+        let cows = 0;
+
+        for (let i = 0; i < 4; i++) {
+          if (guess[i] === secret[i]) {
+            bulls++;
+          } else if (secret.includes(guess[i])) {
+            cows++;
+          }
+        }
+
+        let div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `
+          Guess: ${guess} <br>
+          Correct Position: ${bulls} <br>
+          Correct Numbers : ${cows}
+        `;
+
+        document.getElementById("result").prepend(div);
+
+        if (bulls === 4) {
+          alert("🎉 You Won in " + attempts + " attempts!");
+        }
+
+        document.getElementById("guess").value = "";
+      }
+    </script>
+  </body>
+</html>

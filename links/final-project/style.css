@@ -1,0 +1,48 @@
+.img-fluid.logo {
+  height: 50px;
+  width: auto;
+}
+.menu-bar .nav-link {
+  font-size: clamp(10px, 1.5vw, 16px);
+  padding: clamp(2px, 2vw, 18px);
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: #0d6efd !important; /*text-primary*/
+}
+/*Carousel*/
+.c-img {
+  height: 60vh;
+  object-fit: cover;
+}
+@media (max-width: 800px) {
+  .c-img {
+    height: 200px;
+  }
+}
+/*Card*/
+.card {
+  overflow: hidden;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+.img-sec {
+  object-fit: cover;
+  height: 235px;
+  overflow: hidden;
+}
+.card-img-top {
+  transition: 0.3s;
+}
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+.card .btn {
+  transition: 0.5s !important;
+}
+.card .btn:hover {
+  border-radius: 25px;
+  background-color:;
+}

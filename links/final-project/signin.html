@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign_In</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <style>
+      .go-arrow {
+        transition: 0.3s;
+      }
+      .go:hover .go-arrow {
+        transform: translateX(3px);
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div class="card border-1 shadow bg-transparent">
+            <div class="card-body px-5">
+              <form action="#">
+                <h3 class="text-uppercase text-info text-center mb-4">
+                  Sign in
+                </h3>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    required
+                    id="email"
+                    placeholder="Username@gmail.com"
+                    class="form-control" />
+                  <label for="email">Your Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    required
+                    id="password"
+                    placeholder="Password"
+                    class="form-control" />
+                  <label for="password">Password</label>
+                </div>
+                <div class="text-center">
+                  <a href="forget.html" class="text-danger text-decoration-none"
+                    >Forget Password?</a
+                  >
+                </div>
+                <div class="form-check mb-3">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    class="form-check-input" />
+                  <label
+                    for="checkbox"
+                    class="text-warning fw-light form-check-label"
+                    >Remember Me</label
+                  >
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-success text-uppercase w-100 mb-3">
+                  Log in
+                </button>
+                <p class="text-white">
+                  Don't have an account? please
+                  <a href="reg.html" class="text-decoration-none text-primary"
+                    >Register</a
+                  >
+                  here
+                </p>
+                <p class="text-secondary">
+                  Continue without Log in to see our Products
+                  <a
+                    href="index.html"
+                    class="text-info text-decoration-none d-inline-flex align-items-center gap-1 go"
+                    >Go
+                    <ion-icon
+                      name="arrow-forward-outline"
+                      class="text-center go-arrow"></ion-icon
+                  ></a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal-API</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .mealname {
+        padding: 2px 4px;
+        text-shadow:
+          0 0 9px white,
+          1px 1px 1px yellow;
+      }
+      .modal {
+        box-shadow:
+          0 0 25px black,
+          0 0 30px black;
+      }
+
+      .instruction::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      .instruction::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .instruction::-webkit-scrollbar-thumb {
+        background: rgb(255, 204, 0);
+        border-radius: 999px;
+      }
+
+      body::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background: black;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: cyan;
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+  <body class="bg-black/90 relative">
+    <header
+      class="w-full flex items-center justify-center bg-gray-700 py-4 px-7 h-[70px]">
+      <h1
+        class="text-3xl text-slate-200 uppercase font-bold tracking-widest"
+        style="
+          text-shadow:
+            0px 0px 18px white,
+            4px 4px 1px black;
+        ">
+        Meal Explorer
+      </h1>
+    </header>
+    <div class="w-full flex max-w-7xl mx-auto gap-3 items-center mt-5 px-5">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="search"
+        class="flex-1 outline-none border border-gray-600 h-10 rounded-xl text-lg focus:border-white/50 px-3 py-1 text-white" />
+      <button
+        id="searchBtn"
+        class="text-white bg-gray-600 px-3 h-10 rounded-xl">
+        Search
+      </button>
+    </div>
+    <div
+      id="meal-container"
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 p-5 gap-5"></div>
+    <div
+      id="details"
+      class="fixed top-0 left-0 right-0 backdrop-blur-sm h-screen z-[999] bg-black/50 hidden items-center justify-center p-4">
+      <div
+        class="bg-white/15 modal flex flex-col overflow-hidden rounded-xl backdrop-blur-sm w-[700px] h-[500px] relative">
+        <button
+          id="closemodal"
+          class="absolute top-0 right-3 font-extrabold text-4xl p-1 text-black h-10 w-10 flex items-center justify-center cursor-pointer">
+          &times;
+        </button>
+        <div class="img h-[300px] w-full">
+          <img
+            id="modalImg"
+            src="https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg"
+            class="object-cover h-full w-full"
+            alt="" />
+        </div>
+        <div class="instruction overflow-y-scroll p-3">
+          <div class="flex items-center justify-between">
+            <h2
+              id="mealname"
+              class="text-3xl font-bold mb-2 text-center uppercase text-yellow-500">
+              Chicken Handi
+            </h2>
+            <p id="mealcategory" class="text-lg text-slate-400 font-semibold">
+              Chicken
+            </p>
+          </div>
+          <h2 class="text-2xl font-semibold text-amber-400 underline">
+            Instructions:
+          </h2>
+          <p id="modalinstruction" class="text-gray-100 font-light"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

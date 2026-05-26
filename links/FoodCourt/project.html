@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Court</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <div class="head">
+      <h1>Food Court</h1>
+      <button id="btn-cart">Cart: 0</button>
+    </div>
+    <div id="gallery" class="gallery"></div>
+
+    <div id="modal">
+      <span id="toast">Added to Cart</span>
+      <span id="closeModal">&times;</span>
+      <button id="prevButton">&larr;</button>
+      <button id="nextButton">&rarr;</button>
+      <div class="img-box">
+        <img src="images/21.jpeg" alt="Modal Image" id="modalImage" />
+        <div class="img-caption">
+          <div>
+            <h3>Food Name</h3>
+            <p>Price</p>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="inside-cart">
+        <h3>Your Cart</h3>
+        <span id="closecart">&times;</span>
+      </div>
+      <div id="cart-items"></div>
+      <div class="bill">
+        <div class="amnt">
+          <div class="sub-amnt">
+            <h3>Sub Total :</h3>
+            <span id="sub-amnt">0.00 Rs</span>
+          </div>
+          <div class="tax">
+            <h4>Tax 7% :</h4>
+            <span id="tax">0</span>
+          </div>
+          <div class="total">
+            <h2>Total</h2>
+            <span id="total">0.00 Rs</span>
+          </div>
+        </div>
+        <div class="pay">
+          <button id="btn-pay">Pay</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const foodItems = [
+        {
+          item: "Exotic Veggie Bulgogi Ramen",
+          price: 199,
+          cuisine: "Asian",
+          image: "21.jpeg",
+        },
+        {
+          item: "Dan Dan Chicken Bulgogi Ramen",
+          price: 285,
+          cuisine: "Asian",
+          image: "22.jpeg",
+        },
+        {
+          item: "Chicken Katsu Gochujang Ramen",
+          price: 260,
+          cuisine: "Asian",
+          image: "23.jpeg",
+        },
+        {
+          item: "Crispy Paneer Gochujang Ramen",
+          price: 150,
+          cuisine: "Asian",
+          image: "24.jpeg",
+        },
+        {
+          item: "Crispy Hot Peri Peri Chicken Superbowl",
+          price: 339,
+          cuisine: "Asian",
+          image: "25.jpeg",
+        },
+        {
+          item: "Ultimate Burrito Superbowl",
+          price: 300,
+          cuisine: "Continental",
+          image: "26.jpeg",
+        },
+        {
+          item: "Stir Fried Chilli Paneer Superbowl",
+          price: 320,
+          cuisine: "Pan-Asian",
+          image: "27.jpeg",
+        },
+        {
+          item: "Mexican Burrito Superbowl",
+          price: 400,
+          cuisine: "Continental",
+          image: "28.jpeg",
+        },
+        {
+          item: "Grilled BBQ Chicken Superbowl",
+          price: 360,
+          cuisine: "Mexican",
+          image: "29.jpeg",
+        },
+        {
+          item: "Smoke that Superbowl",
+          price: 300,
+          cuisine: "Pan-Asian",
+          image: "30.jpeg",
+        },
+        {
+          item: "Chicken Maryland Superbowl",
+          price: 449,
+          cuisine: "Mexican",
+          image: "31.jpeg",
+        },
+        {
+          item: "Teriyaki Chicken Superbowl",
+          price: 400,
+          cuisine: "Continental",
+          image: "32.jpeg",
+        },
+        {
+          item: "Soboro Don Superbowl",
+          price: 315,
+          cuisine: "Pan-Asian",
+          image: "33.jpeg",
+        },
+        {
+          item: "Chicken Cafe De Paris Superbowl",
+          price: 330,
+          cuisine: "Continental",
+          image: "34.jpeg",
+        },
+        {
+          item: "Rooster Chicken Superbowl",
+          price: 380,
+          cuisine: "Pan-Asian",
+          image: "35.jpeg",
+        },
+      ];
+      const sidebar = document.getElementById("sidebar");
+      const cart = document.getElementById("btn-cart");
+      const closecrt = document.getElementById("closecart");
+      const gallery = document.getElementById("gallery");
+      const modal = document.getElementById("modal");
+      const modalImage = document.getElementById("modalImage");
+      const imgCaption = document.querySelector(".img-caption");
+      const closeModal = document.getElementById("closeModal");
+      const prevButton = document.getElementById("prevButton");
+      const nextButton = document.getElementById("nextButton");
+      let currentImageIndex = 0;
+
+      function createCard(food, index) {
+        const galleryItem = document.createElement("div");
+        galleryItem.className = "gallery-item";
+        galleryItem.title = food.item;
+
+        const cuisineSpan = document.createElement("span");
+        cuisineSpan.textContent = food.cuisine;
+        cuisineSpan.className = "cuisine";
+
+        const img = document.createElement("img");
+        img.src = "images/" + food.image;
+        img.alt = food.item;
+
+        const captionDiv = document.createElement("div");
+        captionDiv.className = "caption";
+
+        const spanTitle = document.createElement("span");
+        spanTitle.textContent = food.item;
+
+        const spanPrice = document.createElement("span");
+        spanPrice.textContent = `₹${food.price.toFixed(2)}`;
+
+        captionDiv.append(spanTitle, spanPrice);
+
+        galleryItem.append(cuisineSpan, img, captionDiv);
+
+        galleryItem.addEventListener("click", function () {
+          currentImageIndex = index;
+          console.log(currentImageIndex);
+          modalImage.src = "images/" + food.image;
+          imgCaption.querySelector("h3").textContent = food.item;
+          imgCaption.querySelector("p").textContent =
+            `₹${food.price.toFixed(2)}`;
+          modal.style.display = "flex";
+        });
+        return galleryItem;
+      }
+
+      foodItems.forEach((food, index) => {
+        gallery.appendChild(createCard(food, index));
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      function updateModalImage() {
+        const food = foodItems[currentImageIndex];
+        modalImage.src = "images/" + food.image;
+        imgCaption.querySelector("h3").textContent = food.item;
+        imgCaption.querySelector("p").textContent = `₹${food.price.toFixed(2)}`;
+      }
+      prevButton.addEventListener("click", function () {
+        currentImageIndex =
+          (currentImageIndex - 1 + foodItems.length) % foodItems.length;
+        updateModalImage();
+      });
+
+      nextButton.addEventListener("click", function () {
+        currentImageIndex = (currentImageIndex + 1) % foodItems.length;
+        updateModalImage();
+      });
+      cart.addEventListener("click", () => {
+        sidebar.style.transform = "translateX(0)";
+      });
+      closecrt.addEventListener("click", () => {
+        sidebar.style.transform = "translateX(450px)";
+      });
+      const addBtn = document.querySelector(".add-btn");
+      const toast = document.getElementById("toast");
+
+      let cartItems = [];
+
+      addBtn.addEventListener("click", () => {
+        const selectedFood = foodItems[currentImageIndex];
+        toast.style.transform = "translateY(0)";
+        setTimeout(() => {
+          toast.style.transform = "translateY(-90px)";
+        }, 1000);
+
+        const existingItem = cartItems.find(
+          (item) => item.item === selectedFood.item,
+        );
+
+        if (existingItem) {
+          existingItem.qty++;
+        } else {
+          cartItems.push({
+            ...selectedFood,
+            qty: 1,
+          });
+        }
+
+        renderCart();
+      });
+      const cartContainer = document.getElementById("cart-items");
+
+      const subAmount = document.getElementById("sub-amnt");
+      const total = document.getElementById("total");
+      const tax = document.getElementById("tax");
+
+      function renderCart() {
+        cartContainer.innerHTML = "";
+
+        let subtotal = 0;
+
+        cartItems.forEach((food, index) => {
+          const itemTotal = food.price * food.qty;
+
+          subtotal += itemTotal;
+
+          const div = document.createElement("div");
+          div.className = "items";
+
+          div.innerHTML = `
+      <div class="item">
+        <p>${food.item}</p>
+        <span>₹${itemTotal}</span>
+      </div>
+
+      <div class="qty">
+        <button class="qty-dec">-</button>
+
+        <span class="qty-count">${food.qty}</span>
+
+        <button class="qty-inc">+</button>
+      </div>
+    `;
+
+          div.querySelector(".qty-inc").addEventListener("click", () => {
+            food.qty++;
+            renderCart();
+          });
+
+          div.querySelector(".qty-dec").addEventListener("click", () => {
+            if (food.qty > 1) {
+              food.qty--;
+            } else {
+              cartItems.splice(index, 1);
+            }
+
+            renderCart();
+          });
+
+          cartContainer.appendChild(div);
+        });
+
+        subAmount.textContent = `₹${subtotal.toFixed(2)}`;
+
+        const taxAmount = subtotal * 0.07;
+
+        const finalTotal = subtotal + taxAmount;
+
+        total.textContent = `₹${finalTotal.toFixed(2)}`;
+        tax.textContent = `₹${taxAmount.toFixed(2)}`;
+
+        cart.textContent = `Cart: ${cartItems.length}`;
+      }
+    </script>
+  </body>
+</html>

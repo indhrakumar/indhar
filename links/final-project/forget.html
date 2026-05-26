@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign_In</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <style>
+      .go-arrow {
+        transition: 0.3s;
+      }
+      .go:hover .go-arrow {
+        transform: translateX(3px);
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div class="card border-1 shadow bg-transparent">
+            <div class="card-body px-5">
+              <form action="#">
+                <h3 class="text-uppercase text-info text-center mb-4">
+                  Forget Password
+                </h3>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    required
+                    id="email"
+                    placeholder="Username@gmail.com"
+                    class="form-control" />
+                  <label for="email">Your Email</label>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-success text-uppercase w-100 mb-3">
+                  Send Link
+                </button>
+                <p class="text-white">
+                  Don't want to do this, then
+                  <a
+                    href="signin.html"
+                    class="text-decoration-none text-primary"
+                    >Go back to LogIn page</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
