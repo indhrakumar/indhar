@@ -3,7 +3,7 @@
 Modern responsive portfolio website built using HTML, Tailwind CSS and JavaScript.
 
 ## 🌐 Live Demo
-https://indhrakumar.github.io/portfolio
+https://indhrakumar.github.io/indhar/
 
 ## ✨ Features
 - Responsive Design
