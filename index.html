@@ -1,0 +1,1820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indhra Kumar - profile</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Kalam:wght@300;400;700&family=Lugrasimo&display=swap");
+      html {
+        scroll-behavior: smooth;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      body {
+        background-image: url();
+        background-position: center;
+        background-size: cover;
+      }
+      body::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background: black;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: cyan;
+        border-radius: 999px;
+      }
+      .card {
+        transition: 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow:
+          0 0 10px cyan,
+          0 0 20px black;
+      }
+      .percentage {
+        color: rgb(43, 210, 18);
+        font-weight: 400;
+        text-shadow:
+          0 0 20px rgb(43, 210, 18),
+          0 0 4px black,
+          0 0 3px white;
+      }
+      .line {
+        height: 2px;
+        box-shadow:
+          0 0 10px cyan,
+          0 0 20px cyan,
+          0 0 30px cyan,
+          0 0 40px cyan;
+      }
+      .mypic {
+        box-shadow:
+          0 0 10px cyan,
+          0 0 15px cyan,
+          0 0 20px cyan;
+        transition: 0.3s;
+      }
+      .mypic:hover {
+        box-shadow:
+          0 0 25px cyan,
+          0 0 50px cyan,
+          0 0 80px cyan;
+      }
+      #menu-box a {
+        text-shadow: 0 0 25px cyan;
+      }
+      #menu-box a:hover {
+        text-shadow: 0 0 25px rgb(0, 255, 30);
+      }
+      .menu a {
+        text-shadow: 0 0 25px cyan;
+        transition: 0.3s;
+      }
+      .menu a:hover {
+        color: white;
+        text-shadow: 0 0 25px white;
+      }
+      .myself h1 {
+        font-family: "Lugrasimo", cursive;
+        text-shadow:
+          0 0 10px black,
+          0 0 20px cyan;
+      }
+      .myself p {
+        text-shadow: 0 0 20px;
+      }
+      header h2 {
+        font-family: "kalam", cursive;
+      }
+      /*Logo flip*/
+      .rotate-img {
+        animation: coinSpin 0.7s ease;
+      }
+
+      @keyframes coinSpin {
+        from {
+          transform: rotateY(0deg);
+        }
+
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+      .code-used {
+        height: 300px;
+      }
+       .typed-cursor {
+        color: yellow;
+        font-size: 30px;
+      }
+      /*education*/
+
+      .timeline-dot,
+      .timeline-line,
+      .edu-card {
+        opacity: 0;
+      }
+
+      .timeline-dot.animate {
+        animation: dotGlow 0.2s ease forwards;
+      }
+
+      .timeline-line.animate {
+        animation: lineGrow 0.2s ease forwards;
+        transform-origin: top;
+      }
+
+      .edu-card.animate {
+        animation: cardShow 0.2s ease forwards;
+      }
+
+      @keyframes dotGlow {
+        0% {
+          opacity: 0;
+          transform: scale(0.3);
+          box-shadow: 0 0 0 cyan;
+        }
+
+        50% {
+          opacity: 1;
+          transform: scale(1.3);
+          box-shadow: 0 0 40px cyan;
+        }
+
+        100% {
+          opacity: 1;
+          transform: scale(1);
+          box-shadow: 0 0 20px cyan;
+        }
+      }
+
+      @keyframes lineGrow {
+        0% {
+          opacity: 1;
+          transform: scaleY(0);
+        }
+
+        100% {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+
+      @keyframes cardShow {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black overflow-hidden">
+     <!-- LOADER -->
+    <div
+      id="loader"
+      class="fixed inset-0 z-[9999] bg-black flex items-center justify-center transition-all duration-700">
+      <div class="relative w-[70px] h-[70px]">
+        <!-- spinning ring -->
+        <div
+          class="absolute inset-0 rounded-full border-4 border-cyan-500 border-t-transparent border-b-transparent animate-spin shadow-[0_0_25px_cyan]"></div>
+
+        <!-- center glow -->
+        <div
+          class="absolute inset-[35%] rounded-full bg-cyan-400 shadow-[0_0_40px_cyan] animate-pulse"></div>
+      </div>
+    </div>
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-[9999]">
+      <div
+        class="w-full pt-3 h-[80px] bg-black/70 backdrop-blur-sm flex items-center justify-between px-4 xl:px-16">
+        <!-- <h2
+          class="uppercase text-cyan-400 text-3xl lg:text-4xl font-bold"
+          style="text-shadow: 0 0 30px cyan">
+          Indhra Kumar
+          <span class="text-amber-400" style="text-shadow: 0 0 30px">R M</span>
+        </h2> -->
+        <div class="flex items-center justify-start gap-5">
+          <div
+            class="w-[60px] h-[60px] rounded-full border-3 border-cyan-300 shadow-[0_0_20px_cyan] flex items-start justify-start overflow-hidden">
+            <img
+              id="logo"
+              src="image/ikrms-bg-removed.png"
+              data-img1="image/ikrms-bg-removed.png"
+              data-img2="image/background-removed-background-removed.png"
+              class="w-[100%] h-[100%] cursor-pointe -translate-x-[1px] rounded-full shadow-[0_0_20px_cyan] scale-151"
+              alt="logo" />
+          </div>
+          <div class="h-full flex items-center justify-center lg:justify-start">
+            <h2
+              class="uppercase text-cyan-400 text-3xl mt-2 lg:mt-3 lg:text-4xl font-bold"
+              style="text-shadow: 0 0 30px cyan">
+              Indhra Kumar
+              <span class="text-amber-400" style="text-shadow: 0 0 30px"
+                >R M</span
+              >
+            </h2>
+          </div>
+        </div>
+        <!-- Full Screen menu -->
+        <div
+          class="menu hidden text-lg lg:text-2xl me-5 xl:me-16 md:flex gap-6 lg:gap-10 items-center">
+          <a href="#home" class="text-cyan-400 font-semibold">Home</a>
+          <a href="#education" class="text-cyan-400 font-semibold">Education</a>
+          <a href="#skills" class="text-cyan-400 font-semibold">Skills</a>
+          <a href="#contact" class="text-cyan-400 font-semibold">Contact</a>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          id="menu-box"
+          class="fixed top-4 right-4 w-[200px] bg-black/80 backdrop-blur-[30px] flex flex-col gap-4 p-3 rounded-2xl shadow-[0_0_5px_aqua] md:hidden translate-x-[120%] opacity-0 pointer-events-none transition-all duration-300 cursor-pointer z-50">
+          <span
+            id="closemenu"
+            class="text-cyan-500 text-4xl absolute right-2 top-0 hover:text-red-500 transition-all duration-200"
+            >&times;</span
+          >
+          <a
+            href="#home"
+            class="text-cyan-400 text-center text-lg mt-7 me-2 hover:text-green-500 font-semibold transition-all duration-200"
+            >Home</a
+          >
+          <a
+            href="#education"
+            class="text-cyan-400 text-center text-lg me-2 hover:text-green-500 font-semibold transition-all duration-200"
+            >Education</a
+          >
+          <a
+            href="#skills"
+            class="text-cyan-400 text-center text-lg me-2 hover:text-green-500 font-semibold transition-all duration-200"
+            >Skills</a
+          >
+          <a
+            href="#contact"
+            class="text-cyan-400 text-center text-lg me-2 hover:text-green-500 font-semibold transition-all duration-200"
+            >Contact</a
+          >
+        </div>
+
+        <!-- small screen  btn -->
+        <button id="btnmenu" class="text-cyan-400 text-3xl md:hidden">
+          <i class="bi bi-list" style="text-shadow: 0 0 15px"></i>
+        </button>
+      </div>
+    </header>
+
+    <section id="home" class="min-h-screen scroll-mt-[90px] pt-[90px]">
+      <h2
+        class="text-white mt-[10px] text-4xl md:text-5xl lg:text-6xl text-center font-bold p-4"
+        style="text-shadow: 0 0 35px">
+        About
+        <span class="text-green-500" style="text-shadow: 0 0 35px">Me</span>
+      </h2>
+      <div
+        class="flex flex-col md:flex-row w-full gap-4 md:gap-7 p-2 justify-center items-center">
+        <div
+          class="flex flex-col mt-1 md:mt-0 gap-2 order-2 md:order-1 justify-center items-center p-2 md:justify-start md:items-start">
+          <h2
+            class="text-cyan-300 text-3xl md:text-5xl font-bold"
+            style="
+              text-shadow:
+                7px 7px 2px black,
+                0 0 30px cyan,
+                3px 3px 5px black;
+            ">
+            <span class="text-green-500" style="text-shadow: 0 0 25px"
+              >Hii..!
+            </span>
+            It's Indhra Kumar R M
+          </h2>
+
+          <div class="flex items-center h-[35px]">
+            <span
+              class="text-animation text-2xl md:text-3xl italic font-semibold text-yellow-400"
+              style="text-shadow: 0 0 15px"></span>
+          </div>
+
+          <div
+            class="mt-3 md:mt-1 p-1 flex flex-col gap-1 md:gap-2 text-justify md:text-start">
+            <p
+              class="text-white text-lg md:text-2xl italic leading-[35px] mb-3 md:mb-2 lg:mb-10 md:leading-normal font-semibold tracking-normal">
+              I'm a passionate fresher Full Stack Developer with skills in
+              <span class="text-cyan-300" style="text-shadow: 0 0 10px"
+                >HTML</span
+              >,
+              <span class="text-cyan-300" style="text-shadow: 0 0 10px"
+                >CSS</span
+              >,
+              <span class="text-cyan-300" style="text-shadow: 0 0 10px"
+                >JavaScript</span
+              >,
+              <span class="text-cyan-300" style="text-shadow: 0 0 10px"
+                >Tailwind CSS</span
+              >,
+              <span class="text-cyan-300" style="text-shadow: 0 0 10px"
+                >Node.js</span
+              >,
+              <span class="text-cyan-300" style="text-shadow: 0 0 10px"
+                >Express.js</span
+              >, and
+              <span class="text-cyan-300" style="text-shadow: 0 0 10px"
+                >MongoDB</span
+              >. I enjoy building responsive and modern web applications while
+              continuously learning new technologies and improving my
+              development skills.
+            </p>
+
+            <div
+              class="flex gap-[40px] md:gap-[50px] items-center justify-center md:justify-start my-3 lg:ms-5 lg:mb-10">
+              <a href="https://www.instagram.com/_innocent_boy_i17/">
+                <i
+                  class="bi bi-instagram text-cyan-300 bg-black flex text-center px-2 py-2 text-3xl border border-cyan-300 rounded-full hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_cyan] hover:bg-cyan-300 hover:text-black transition-all duration-300"></i>
+              </a>
+
+              <a href="https://github.com/indhrakumar">
+                <i
+                  class="bi bi-github text-cyan-300 bg-black flex text-center px-2 py-2 text-3xl border border-cyan-300 rounded-full hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_cyan] hover:bg-cyan-300 hover:text-black transition-all duration-300"></i>
+              </a>
+
+              <a href="">
+                <i
+                  class="bi bi-whatsapp text-cyan-300 bg-black px-2 flex text-center py-2 text-3xl border border-cyan-300 rounded-full hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_cyan] hover:bg-cyan-300 hover:text-black transition-all duration-300"></i>
+              </a>
+            </div>
+            <div
+              class="flex gap-3 lg:gap-6 w-full py-3 mx-auto lg:mx-2 items-center md:justify-start justify-center">
+              <a
+                href="#contact"
+                class="bg-cyan-300 w-2/5 lg:w-1/3 flex items-center justify-center text-black px-4 py-3 text-xl lg:text-xl rounded-full font-semibold hover:text-white shadow-[0_0_15px_cyan] hover:shadow-[0_0_25px_cyan] transition-all duration-300"
+                ><i class="fa fa-envelope me-2 my-auto" aria-hidden="true"></i
+                >Contact</a
+              >
+              <a
+                href="Cv/indhrakumar_cv-latest.pdf"
+                class="hover:bg-cyan-300 w-2/5 lg:w-1/3 flex items-center justify-center hover:text-black px-4 py-3 text-xl lg:text-xl rounded-full font-semibold text-cyan-300 border-2 border-cyan-300 hover:shadow-[0_0_25px_cyan] transition-all duration-300">
+                <i class="fa-regular fa-file-lines me-3"></i>
+
+                Open - CV</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col mt-10 md:mt-5 md:mb-auto md:items-end lg:pe-10 w-full items-center justify-center order-1 md:order-2">
+          <div
+            class="mypic shrink-0 h-[300px] w-[300px] rounded-full bg-gray-400 md:w-[280px] md:h-[280px] lg:w-[450px] lg:h-[450px] overflow-hidden">
+            <img
+              src="image/indhar.jpg"
+              alt="Indhra Kumar"
+              title="Indhra kumar"
+              class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="line w-[100%] justify-center gap-10 items-center mx-auto bg-cyan-300 flex">
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[18px] w-[18px] rotate-45 scale-110 shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+    </div>
+    <section
+      id="education"
+      class="min-h-screen mt-[90px] scroll-mt-[90px] px-5">
+      <h2
+        class="text-white mt-[10px] text-4xl md:text-6xl text-center font-bold p-4"
+        style="text-shadow: 0 0 10px">
+        My
+        <span class="text-green-500" style="text-shadow: 0 0 10px"
+          >Education</span
+        >
+      </h2>
+      <div
+        class="bg-black md:w-[80%] md:mx-auto h-full flex flex-col p-6 items-center">
+        <div
+          class="timeline-dot w-[25px] h-[25px] rounded-full border-4 border-cyan-300 bg-cyan-600 shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="timeline-line w-[3px] h-[50px] bg-cyan-300 shadow-[0_0_20px_cyan]"></div>
+        <!--Degree-->
+        <div
+          class="ug edu-card w-full flex gap-10 bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 shadow-[0_0_10px_cyan] hover:shadow-[0_0_20px_cyan] transition-all duration-150">
+          <div class="logo w-[100px] flex items-center justify-start">
+            <i
+              class="fa-solid fa-user-graduate border text-cyan-300 border-cyan-300 h-[60px] w-[60px] p-3 rounded-full text-center flex items-center text-3xl"
+              style="text-shadow: 0 0 20px; box-shadow: 0 0 20px"></i>
+          </div>
+
+          <div class="w-full flex flex-col gap-3 items-start">
+            <h2
+              class="text-2xl text-left md:text-3xl font-bold text-cyan-300"
+              style="text-shadow: 0 0 10px">
+              Bachelor of Information Technology
+            </h2>
+            <p class="text-teal-400 font-semibold text-center">2021 - 2024</p>
+            <p class="text-amber-400 [text-shadow:0_0_10px] text-left italic">
+              University College of Engineering BIT Campus
+            </p>
+            <p class="text-gray-200 text-center italic">Trichy</p>
+          </div>
+        </div>
+        <!--Diploma-->
+        <div
+          class="timeline-line w-[3px] h-[50px] bg-cyan-300 shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="timeline-dot w-[25px] h-[25px] rounded-full border-4 border-cyan-300 bg-black shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="timeline-line w-[3px] h-[50px] bg-cyan-300 shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="diploma edu-card w-full flex gap-10 bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 shadow-[0_0_10px_cyan] hover:shadow-[0_0_20px_cyan] transition-all duration-150">
+          <div class="logo w-[100px] flex items-center justify-start">
+            <i
+              class="fa-solid fa-graduation-cap border text-cyan-300 border-cyan-300 h-[60px] w-[60px] p-3 rounded-full text-center flex items-center text-3xl"
+              style="text-shadow: 0 0 20px; box-shadow: 0 0 20px"></i>
+          </div>
+
+          <div class="w-full flex flex-col gap-3 items-start">
+            <h2
+              class="text-2xl text-left md:text-3xl font-bold text-cyan-300"
+              style="text-shadow: 0 0 10px">
+              Diploma in Electronics and Communication Engineering
+            </h2>
+            <p class="text-teal-400 flex font-semibold me-auto">2018 - 2021</p>
+            <p
+              class="text-amber-400 flex [text-shadow:0_0_10px] me-auto italic">
+              CSI Polytechnic College
+            </p>
+            <p class="text-gray-200 text-left italic">Salem</p>
+          </div>
+        </div>
+        <!--SSLC-->
+        <div
+          class="timeline-line w-[3px] h-[50px] bg-cyan-300 shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="timeline-dot w-[25px] h-[25px] rounded-full border-4 border-cyan-300 bg-black shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="timeline-line w-[3px] h-[50px] bg-cyan-300 shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="sslc edu-card w-full flex gap-10 bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 shadow-[0_0_10px_cyan] hover:shadow-[0_0_20px_cyan] transition-all duration-150">
+          <div class="logo w-[100px] flex items-center justify-start">
+            <i
+              class="fa-solid fa-school border text-cyan-300 border-cyan-300 h-[60px] w-[60px] p-3 rounded-full text-center flex items-center text-3xl"
+              style="text-shadow: 0 0 20px; box-shadow: 0 0 20px"></i>
+          </div>
+
+          <div class="w-full flex flex-col gap-3 items-start">
+            <h2
+              class="text-2xl text-center md:text-3xl font-bold text-cyan-300"
+              style="text-shadow: 0 0 10px">
+              SSLC
+            </h2>
+            <p class="text-teal-400 font-semibold text-center">2017 - 2018</p>
+            <p class="text-amber-400 [text-shadow:0_0_10px] text-left italic">
+              St.Paul's Higher Secondary School
+            </p>
+            <p class="text-gray-200 text-left italic">Salem</p>
+          </div>
+        </div>
+        <div
+          class="timeline-line w-[3px] h-[50px] bg-cyan-300 shadow-[0_0_20px_cyan]"></div>
+        <div
+          class="timeline-dot w-[25px] h-[25px] rounded-full border-4 border-cyan-300 bg-cyan-600 shadow-[0_0_20px_cyan]"></div>
+      </div>
+    </section>
+    <div
+      class="line w-[100%] justify-center gap-10 items-center mx-auto bg-cyan-300 flex">
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[15px] w-[15px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+    </div>
+    <section
+      id="skills"
+      class="min-h-screen bg-black pt-[90px] px-5 pb-14 text-white">
+      <!-- HEADING -->
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center">
+          <h2
+            class="text-4xl font-bold md:text-6xl text-white"
+            style="text-shadow: 0 0 10px">
+            My
+            <span class="text-green-500" style="text-shadow: 0 0 10px"
+              >Skills</span
+            >
+          </h2>
+
+          <p class="mt-4 text-gray-400">
+            Technologies I use to build modern web applications
+          </p>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div
+          class="mt-12 grid grid-cols-3 md:flex flex-wrap items-center justify-start md:justify-center gap-4">
+          <button
+            class="filter-btn active rounded-full border border-green-400 bg-green-400 px-5 py-2 font-semibold text-black transition"
+            data-filter="all">
+            All
+          </button>
+
+          <button
+            class="filter-btn rounded-full border border-white/20 px-5 py-2 transition hover:border-green-400"
+            data-filter="frontend">
+            Frontend
+          </button>
+
+          <button
+            class="filter-btn rounded-full border border-white/20 px-5 py-2 transition hover:border-green-400"
+            data-filter="backend">
+            Backend
+          </button>
+
+          <button
+            class="filter-btn rounded-full border border-white/20 px-5 py-2 transition hover:border-green-400"
+            data-filter="database">
+            Database
+          </button>
+
+          <button
+            class="filter-btn rounded-full border border-white/20 px-5 py-2 transition hover:border-green-400"
+            data-filter="languages">
+            Languages
+          </button>
+          <button
+            class="filter-btn rounded-full border border-white/20 px-5 py-2 transition hover:border-green-400"
+            data-filter="tools">
+            Tools
+          </button>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="mt-16 flex flex-col gap-4">
+          <!-- FRONTEND -->
+          <div
+            class="skill-category bg-black rounded-3xl p-3"
+            data-category="frontend">
+            <h3
+              class="mb-6 text-3xl font-bold text-teal-400"
+              style="text-shadow: 0 0 10px">
+              Frontend Development
+            </h3>
+
+            <div class="gap-4 grid grid-cols-2 md:grid-cols-3 items-stretch">
+              <!-- HTML -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-html5-plain text-6xl text-orange-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-orange-500">HTML</h1>
+                  <p class="text-gray-400">Web Structure</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="95%"
+                    >95%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-orange-500 rounded-full shadow-[0_0_15px_black,0_0_20px_orange,0_0_30px_black] w-[95%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+
+              <!-- CSS -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-css3-plain text-6xl text-blue-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-blue-500">CSS</h1>
+                  <p class="text-gray-400">Web Styling</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="95%"
+                    >95%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-blue-500 rounded-full shadow-[0_0_20px_blue,0_0_30px_black] w-[95%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+              <!--Bootstrap-->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-bootstrap-plain text-6xl text-purple-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-purple-500">
+                    Bootstrap
+                  </h1>
+                  <p class="text-gray-400 text-center">CSS Framework</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="85%"
+                    >85%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-purple-500 rounded-full shadow-[0_0_20px_purple,0_0_30px_black] w-[85%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+              <!--Tailwind CSS-->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px]">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-tailwindcss-plain text-6xl text-cyan-400"
+                    style="text-shadow: 0 0 10px"></i>
+                  <h1 class="text-3xl text-center font-bold mt-3 text-cyan-400">
+                    Tailwind CSS
+                  </h1>
+                  <p class="text-gray-400 text-center">
+                    Utility-First CSS Framework
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="95%"
+                    >95%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-cyan-400 rounded-full shadow-[0_0_20px_cyan,0_0_30px_black] w-[95%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+
+              <!-- JS -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-javascript-plain text-6xl text-yellow-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-yellow-500">
+                    JavaScript
+                  </h1>
+                  <p class="text-gray-400">Web Scripting</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="90%"
+                    >90%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-yellow-500 rounded-full shadow-[0_0_15px_black,0_0_20px_yellow,0_0_20px_black] w-[90%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+              <!-- typeScript -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-typescript-plain text-6xl text-blue-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-blue-500">
+                    TypeScript
+                  </h1>
+                  <p class="text-gray-400">JavaScript with Types</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="90%"
+                    >90%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-blue-500 rounded-full shadow-[0_0_20px_blue,0_0_30px_black] w-[90%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+
+              <!-- REACT -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px]">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-react-plain text-6xl text-cyan-400"
+                    style="text-shadow: 0 0 10px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-cyan-400">React</h1>
+                  <p class="text-gray-400">Frontend Library</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="5%"
+                    >5%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-cyan-400 rounded-full shadow-[0_0_20px_cyan,0_0_30px_black] w-[5%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language -->
+          <div class="skill-category" data-category="languages">
+            <h3
+              class="mb-6 text-3xl font-bold text-amber-500"
+              style="text-shadow: 0 0 10px">
+              Programming Languages
+            </h3>
+            <div class="gap-4 grid grid-cols-2 md:grid-cols-3 items-stretch">
+              <!-- Java -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px]">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-java-plain text-6xl text-red-500"
+                    style="text-shadow: 0 0 10px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-red-500">Java</h1>
+                  <p class="text-gray-400 text-center">
+                    Object-Oriented Programming
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="80%"
+                    >80%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-red-500 rounded-full shadow-[0_0_20px_red,0_0_30px_black] w-[80%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+
+              <!-- python -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-python-plain text-6xl text-blue-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-blue-500">Python</h1>
+                  <p class="text-gray-400 text-center">
+                    General-Purpose Programming Language
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="80%"
+                    >80%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-blue-500 rounded-full shadow-[0_0_20px_blue,0_0_30px_black] w-[80%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+              <!-- C -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-c-plain text-6xl text-blue-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-blue-500">C</h1>
+                  <p class="text-gray-400 text-center">
+                    Low-Level Programming Language
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="80%"
+                    >80%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-blue-500 rounded-full shadow-[0_0_20px_blue,0_0_30px_black] w-[80%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- BACKEND -->
+          <div class="skill-category" data-category="backend">
+            <h3
+              class="mb-6 text-3xl font-bold text-cyan-200"
+              style="text-shadow: 0 0 10px">
+              Backend Development
+            </h3>
+
+            <div class="gap-4 grid grid-cols-2 md:grid-cols-3 items-stretch">
+              <!-- nodeJs -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <!--- <i class="devicon-nodejs-plain text-6xl text-green-500"></i>-->
+                  <i
+                    class="fa-brands fa-node-js text-6xl text-green-500"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-green-500">
+                    Node JS
+                  </h1>
+                  <p class="text-gray-400 text-center">Server Side Runtime</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="85%"
+                    >85%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-green-500 rounded-full shadow-[0_0_20px_green,0_0_20px_green,0_0_30px_black] w-[85%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+
+              <!-- Express -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-express-original-wordmark text-6xl scale-150 text-white"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-white">Express</h1>
+                  <p class="text-gray-400 text-center">
+                    Web Application Framework
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="10%"
+                    >10%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-white rounded-full shadow-[0_0_20px_white,0_0_30px_black] w-[10%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- DATABASE -->
+          <div class="skill-category" data-category="database">
+            <h3
+              class="mb-6 text-3xl font-bold text-green-400"
+              style="text-shadow: 0 0 10px">
+              Database Management
+            </h3>
+            <div class="gap-4 grid grid-cols-2 md:grid-cols-3 items-stretch">
+              <!-- Mysql -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px]">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-mysql-plain-wordmark colored text-7xl"
+                    style="text-shadow: 0 0 10px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-cyan-700">MySQL</h1>
+                  <p class="text-gray-400 text-center">
+                    Relational Database Management System
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="5%"
+                    >5%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-cyan-700 rounded-full shadow-[0_0_20px_cyan,0_0_30px_black] w-[2%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+
+              <!-- MongoDB -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-mongodb-plain colored text-7xl"
+                    style="text-shadow: 0 0 50px"></i>
+                  <h1 class="text-3xl font-bold mt-3 text-green-500">
+                    MongoDB
+                  </h1>
+                  <p class="text-gray-400 text-center">
+                    NoSQL Database Management System
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="10%"
+                    >10%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-green-500 rounded-full shadow-[0_0_20px_green,0_0_30px_black] w-[10%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div class="skill-category" data-category="tools">
+            <h3
+              class="mb-6 text-3xl font-bold text-white"
+              style="text-shadow: 0 0 10px">
+              Tools
+            </h3>
+            <div class="gap-4 grid grid-cols-2 md:grid-cols-3 items-stretch">
+              <!--github-->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <div class="flex gap-6 items-center">
+                    <i
+                      class="devicon-git-plain text-6xl text-orange-500"
+                      style="text-shadow: 0 0 50px"></i>
+                    <i
+                      class="devicon-github-original text-7xl text-white"
+                      style="text-shadow: 0 0 50px"></i>
+                  </div>
+                  <h1
+                    class="text-3xl text-center font-bold mt-3 bg-gradient-to-r from-orange-500 from-[2%] to-white bg-clip-text text-transparent">
+                    Git & GitHub
+                  </h1>
+                  <p class="text-gray-400 text-center">
+                    Version Control System
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="60%"
+                    >60%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-gradient-to-r from-orange-500 to-white rounded-full shadow-[0_0_20px_rgba(249,115,22,0.8),0_0_40px_rgba(255,255,255,0.4),0_0_40px_black] w-[60%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+
+              <!-- vscode -->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-vscode-plain text-7xl text-blue-500"
+                    style="text-shadow: 0 0 80px"></i>
+                  <h1 class="text-3xl text-center font-bold mt-3 text-blue-500">
+                    Visual Studio Code
+                  </h1>
+                  <p class="text-gray-400 text-center">Code Editor</p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="95%"
+                    >95%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-blue-500 rounded-full shadow-[0_0_20px_blue,0_0_30px_black] w-[95%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+              <!--intellij-->
+              <div
+                class="card flex flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-5 min-h-[230px] overflow-hidden">
+                <div class="flex flex-col items-center">
+                  <i
+                    class="devicon-intellij-plain text-7xl text-purple-500"
+                    style="text-shadow: 0 0 90px"></i>
+                  <h1
+                    class="text-3xl text-center font-bold mt-3 text-purple-500">
+                    IntelliJ IDEA
+                  </h1>
+                  <p class="text-gray-400 text-center">
+                    Integrated Development Environment
+                  </p>
+                  <span
+                    class="percentage text-green-500 text-2xl mt-2"
+                    data-target="85%"
+                    >85%</span
+                  >
+                </div>
+                <div class="bar-outer w-full h-3 bg-gray-700 rounded-full mt-5">
+                  <div
+                    class="bar-inner h-full bg-purple-500 rounded-full shadow-[0_0_20px_purple,0_0_30px_black] w-[85%] transition ease-in-out duration-200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="line w-[100%] justify-center gap-10 items-center mx-auto bg-cyan-300 flex">
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[15px] w-[15px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+    </div>
+    <section id="Smallprojects" class="min-h-screen">
+      <div class="h-full w-full pt-[90px] p-8">
+        <h2
+          class="text-white mb-6 text-4xl md:text-6xl text-center font-bold p-4"
+          style="text-shadow: 0 0 25px">
+          Small
+          <span class="text-green-500" style="text-shadow: 0 0 25px"
+            >Tasks</span
+          >
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <a
+            href="./links/FoodCourt/project.html"
+            class="visit group h-[350px] relative flex flex-col gap-3 items-center justify-start border border-gray-500 rounded-xl text-white overflow-hidden">
+            <h2
+              class="text-cyan-300 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Food Court
+            </h2>
+            <div class="img w-full h-[400px] overflow-hidden">
+              <img
+                src="./image/foodcourt.png"
+                class="w-full h-full object-cover"
+                alt="" />
+            </div>
+            <div class="code-used flex flex-col w-full">
+              <!--HTML-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-html5-plain text-xl text-orange-500"
+                      style="text-shadow: 0 0 15px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">HTML</span>
+                    <span class="text-sm font-normal">15%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-orange-500 rounded-full shadow-[0_0_10px_orange] w-[15%] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--CSS-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-css3-plain text-xl text-blue-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">CSS</span>
+                    <span class="text-sm font-normal">50%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-blue-400 rounded-full w-[50%] shadow-[0_0_10px_blue] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Js-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-javascript-plain text-xl text-yellow-500"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">JavaScript</span>
+                    <span class="text-sm font-normal">35%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-yellow-500 rounded-full w-[35%] shadow-[0_0_20px_yellow] h-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span
+              class="text-cyan-300 w-full px-4 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Click to Visit
+            </span>
+          </a>
+          <a
+            href="./links/RPS/rps.html"
+            class="visit group h-[350px] relative flex flex-col gap-3 items-center justify-start border border-gray-500 rounded-xl text-white overflow-hidden">
+            <h2
+              class="text-cyan-300 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Simple Game
+            </h2>
+            <div class="img w-full h-[400px] overflow-hidden">
+              <img
+                src="./image/rps.png"
+                class="w-full h-full object-cover"
+                alt="" />
+            </div>
+            <div class="code-used flex flex-col w-full">
+              <!--HTML-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-html5-plain text-xl text-orange-500"
+                      style="text-shadow: 0 0 15px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">HTML</span>
+                    <span class="text-sm font-normal">30%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-orange-500 rounded-full shadow-[0_0_10px_orange] w-[30%] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--CSS-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-css3-plain text-xl text-blue-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">CSS</span>
+                    <span class="text-sm font-normal">35%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-blue-400 rounded-full w-[35%] shadow-[0_0_10px_blue] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Js-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-javascript-plain text-xl text-yellow-500"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">JavaScript</span>
+                    <span class="text-sm font-normal">35%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-yellow-500 rounded-full w-[35%] shadow-[0_0_20px_yellow] h-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span
+              class="text-cyan-300 w-full px-4 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Click to Visit
+            </span>
+          </a>
+          <a
+            href="./links/Foods&Snacks/foodOrder.html"
+            class="visit group h-[350px] relative flex flex-col gap-3 items-center justify-start border border-gray-500 rounded-xl text-white overflow-hidden">
+            <h2
+              class="text-cyan-300 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Foods & Snacks
+            </h2>
+            <div class="img w-full h-[400px] overflow-hidden">
+              <img
+                src="./image/f&s.png"
+                class="w-full h-full object-cover"
+                alt="" />
+            </div>
+            <div class="code-used flex flex-col w-full">
+              <!--HTML-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-html5-plain text-xl text-orange-500"
+                      style="text-shadow: 0 0 15px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">HTML</span>
+                    <span class="text-sm font-normal">10%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-orange-500 rounded-full shadow-[0_0_10px_orange] w-[10%] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--CSS-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-css3-plain text-xl text-blue-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">CSS</span>
+                    <span class="text-sm font-normal">5%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-blue-400 rounded-full w-[5%] shadow-[0_0_10px_blue] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Js-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-javascript-plain text-xl text-yellow-500"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">JavaScript</span>
+                    <span class="text-sm font-normal">25%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-yellow-500 rounded-full w-[25%] shadow-[0_0_20px_yellow] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--tailwind-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-tailwindcss-plain text-xl text-cyan-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">Tailwind</span>
+                    <span class="text-sm font-normal">60%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-cyan-400 rounded-full w-[60%] shadow-[0_0_20px_cyan] h-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span
+              class="text-cyan-300 w-full px-4 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Click to Visit
+            </span>
+          </a>
+          <a
+            href="./links/own/index.html"
+            class="visit group h-[350px] relative flex flex-col gap-3 items-center justify-start border border-gray-500 rounded-xl text-white overflow-hidden">
+            <h2
+              class="text-cyan-300 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Online shopping
+            </h2>
+            <div class="img w-full h-[400px] overflow-hidden">
+              <img
+                src="./image/onlineshopping.png"
+                class="w-full h-full object-cover"
+                alt="" />
+            </div>
+
+            <div class="code-used flex flex-col w-full">
+              <!--HTML-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-html5-plain text-xl text-orange-500"
+                      style="text-shadow: 0 0 15px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">HTML</span>
+                    <span class="text-sm font-normal">10%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-orange-500 rounded-full shadow-[0_0_10px_orange] w-[10%] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--CSS-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-css3-plain text-xl text-blue-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">CSS</span>
+                    <span class="text-sm font-normal">15%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-blue-400 rounded-full w-[15%] shadow-[0_0_10px_blue] h-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Bootstrap-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-bootstrap-plain text-xl text-purple-600"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">BootStrap</span>
+                    <span class="text-sm font-normal">75%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-purple-600 rounded-full w-[75%] shadow-[0_0_20px_violet] h-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <span
+              class="text-cyan-300 w-full px-4 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Click to Visit
+            </span>
+          </a>
+          <a
+            href="./links/final-project/index.html"
+            class="visit group h-[350px] relative flex flex-col gap-3 items-center justify-start border border-gray-500 rounded-xl text-white overflow-hidden">
+            <h2
+              class="text-cyan-300 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Accessories
+            </h2>
+            <div class="img w-full h-[400px] overflow-hidden">
+              <img
+                src="./image/qccessories.png"
+                class="w-full h-full object-cover"
+                alt="" />
+            </div>
+            <div class="code-used flex flex-col w-full">
+              <!--HTML-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-html5-plain text-xl text-orange-500"
+                      style="text-shadow: 0 0 15px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">HTML</span>
+                    <span class="text-sm font-normal">20%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-orange-500 rounded-full shadow-[0_0_10px_orange] w-[20%] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--CSS-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-css3-plain text-xl text-blue-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">CSS</span>
+                    <span class="text-sm font-normal">20%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-blue-400 rounded-full w-[20%] shadow-[0_0_10px_blue] h-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Bootstrap-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-bootstrap-plain text-xl text-purple-600"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">BootStrap</span>
+                    <span class="text-sm font-normal">60%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-purple-600 rounded-full w-[60%] shadow-[0_0_20px_violet] h-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <span
+              class="text-cyan-300 w-full px-4 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Click to Visit
+            </span>
+          </a>
+          <a
+            href="./links/index.html"
+            class="visit group h-[350px] relative flex flex-col gap-3 items-center justify-start border border-gray-500 rounded-xl text-white overflow-hidden">
+            <h2
+              class="text-cyan-300 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Bulls & Cow Game
+            </h2>
+            <div class="img w-full h-[400px] overflow-hidden">
+              <img
+                src="./image/bullsandcow.png"
+                class="w-full h-full object-cover"
+                alt="" />
+            </div>
+            <div class="code-used flex flex-col w-full">
+              <!--HTML-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-html5-plain text-xl text-orange-500"
+                      style="text-shadow: 0 0 15px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">HTML</span>
+                    <span class="text-sm font-normal">5%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-orange-500 rounded-full shadow-[0_0_10px_orange] w-[5%] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--CSS-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-css3-plain text-xl text-blue-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">CSS</span>
+                    <span class="text-sm font-normal">50%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-blue-400 rounded-full w-[50%] shadow-[0_0_10px_blue] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Js-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-javascript-plain text-xl text-yellow-500"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">JavaScript</span>
+                    <span class="text-sm font-normal">45%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-yellow-500 rounded-full w-[45%] shadow-[0_0_20px_yellow] h-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <span
+              class="text-cyan-300 w-full px-4 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Click to Visit
+            </span>
+          </a>
+          <a
+            href="./links/meal-api/index.html"
+            class="visit group h-[350px] relative flex flex-col gap-3 items-center justify-start border border-gray-500 rounded-xl text-white overflow-hidden">
+            <h2
+              class="text-cyan-300 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Meal Explorer
+            </h2>
+            <div class="img w-full h-[400px] overflow-hidden">
+              <img
+                src="./image/mealexplorer.png"
+                class="w-full h-full object-cover object-top"
+                alt="" />
+            </div>
+            <div class="code-used flex flex-col w-full">
+              <!--HTML-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-html5-plain text-xl text-orange-500"
+                      style="text-shadow: 0 0 15px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">HTML</span>
+                    <span class="text-sm font-normal">15%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-orange-500 rounded-full shadow-[0_0_10px_orange] w-[10%] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--CSS-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-css3-plain text-xl text-blue-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-light">CSS</span>
+                    <span class="text-sm font-light">5%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-blue-400 rounded-full w-[5%] shadow-[0_0_10px_blue] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--Js-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-javascript-plain text-xl text-yellow-500"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">JavaScript</span>
+                    <span class="text-sm font-normal">50%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-yellow-500 rounded-full w-[50%] shadow-[0_0_20px_yellow] h-full"></div>
+                  </div>
+                </div>
+              </div>
+              <!--tailwind-->
+              <div class="flex w-[100%] px-2 gap-2">
+                <div class="w-2/12 flex items-center justify-center">
+                  <span
+                    class="rounded-full w-7 h-7 flex items-center justify-center"
+                    ><i
+                      class="devicon-tailwindcss-plain text-xl text-cyan-400"
+                      style="text-shadow: 0 0 20px"></i
+                  ></span>
+                </div>
+                <div class="w-10/12 flex flex-col my-auto">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-normal">Tailwind</span>
+                    <span class="text-sm font-normal">30%</span>
+                  </div>
+                  <div class="h-1 bg-gray-700 w-full rounded-full">
+                    <div
+                      class="bg-cyan-400 rounded-full w-[30%] shadow-[0_0_20px_cyan] h-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <span
+              class="text-cyan-300 w-full px-4 text-xl text-center"
+              style="text-shadow: 0 0 30px">
+              Click to Visit
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div
+      class="line w-[100%] justify-center gap-10 items-center mx-auto bg-cyan-300 flex">
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[15px] w-[15px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+      <div
+        class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+    </div>
+    <section id="contact" class="min-h-screen flex flex-col">
+      <div class="contact-sec px-7 pb-4 h-[520px] flex flex-col items-center">
+        <h2
+          class="text-white pt-[90px] mb-6 text-4xl md:text-6xl text-center font-bold p-4"
+          style="text-shadow: 0 0 25px">
+          Contact
+          <span class="text-green-500" style="text-shadow: 0 0 25px">Me</span>
+        </h2>
+        <div
+          class="group h-2/3 border bg-gray-900/20 backdrop-blur-sm border-cyan-300 w-full md:w-2/3 lg:w-2/5 md:mx-auto rounded-3xl flex flex-col gap-4 p-6 shadow-[0_0_10px_rgba(0,255,255,0.2)] hover:shadow-[0_0_25px_cyan] hover:-translate-y-1 transition-all duration-300">
+          <input
+            type="text"
+            class="outline-none border text-gray-300 bg-transparent border-cyan-400 text-lg px-4 py-2 h-16 rounded-full font-light transition-all duration-300 focus:border-cyan-200 focus:shadow-[0_0_20px_cyan] group-hover:shadow-[0_0_10px_rgba(0,255,255,0.3)]"
+            placeholder="Your Name" />
+
+          <input
+            type="email"
+            class="outline-none border text-gray-300 bg-transparent border-cyan-400 text-lg px-4 py-2 h-16 rounded-full font-light transition-all duration-300 focus:border-cyan-200 focus:shadow-[0_0_20px_cyan] group-hover:shadow-[0_0_10px_rgba(0,255,255,0.3)]"
+            placeholder="Email" />
+
+          <textarea
+            cols="30"
+            rows="10"
+            class="resize-none outline-none border text-gray-300 bg-transparent border-cyan-400 text-lg px-4 py-3 rounded-3xl font-light transition-all duration-300 focus:border-cyan-200 focus:shadow-[0_0_20px_cyan] group-hover:shadow-[0_0_10px_rgba(0,255,255,0.3)]"
+            placeholder="Enter Your Message"></textarea>
+
+          <button
+            class="border font-bold text-xl border-cyan-300 w-fit mx-auto px-[50px] py-[7px] text-black rounded-full bg-cyan-300 shadow-[0_0_10px_cyan] hover:shadow-[0_0_25px_cyan] hover:scale-105 transition-all duration-300">
+            Send
+          </button>
+        </div>
+      </div>
+      <footer class="flex flex-col mt-auto py-6 text-center text-gray-400">
+        <div
+          class="line w-[100%] my-7 justify-center gap-10 items-center mx-auto bg-cyan-300 flex">
+          <div
+            class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+          <div
+            class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+          <div
+            class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+          <div
+            class="flex bg-cyan-300 h-[18px] w-[18px] rotate-45 scale-110 shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+          <div
+            class="flex bg-cyan-300 h-[12px] w-[12px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+          <div
+            class="flex bg-cyan-300 h-[10px] w-[10px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+          <div
+            class="flex bg-cyan-300 h-[8px] w-[8px] rounded-full shadow-[0_0_10px_cyan,0_0_15px_cyan,0_0_20px_cyan]"></div>
+        </div>
+        <div class="flex items-center justify-between px-10 gap-10">
+          <div class="myself flex flex-col gap-2 w-full">
+            <h1 class="mt-1 text-lg md:text-3xl font-semibold text-cyan-400">
+              Indhra Kumar R M
+            </h1>
+            <p class="text-lg italic">Full Stack Developer</p>
+          </div>
+          <div class="flex flex-col gap-1 w-full">
+            <h2 class="text-lg lg:text-3xl font-semibold">Contact</h2>
+            <div class="flex items-center justify-center gap-10 mt-2 text-xl">
+              <a href="https://github.com/indhrakumar">
+                <i
+                  class="fa-brands fa-github hover:[text-shadow:0_0_12px_white] hover:text-white transition-all duration-300"></i>
+              </a>
+              <a href="#">
+                <i
+                  class="fa-brands fa-linkedin hover:[text-shadow:0_0_12px_cyan] hover:text-white transition-all duration-300"></i>
+              </a>
+              <a href="https://www.instagram.com/_innocent_boy_i17/">
+                <i
+                  class="fa-brands fa-instagram hover:[text-shadow:0_0_12px_red] hover:text-white transition-all duration-300"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="mt-5 mb-2 text-sm text-gray-500">
+          © 2026 All Rights Reserved
+        </p>
+      </footer>
+    </section>
+
+   <script src="script.js"></script>
+  </body>
+</html>
