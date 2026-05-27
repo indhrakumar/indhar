@@ -102,6 +102,9 @@ body {
   border-radius: 500px;
   cursor: pointer;
 }
+#buttons button:hover {
+  background: #222222;
+}
 .clrbtn {
   display: flex;
   grid-column: 1/-1;
