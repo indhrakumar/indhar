@@ -173,5 +173,72 @@ window.addEventListener("load", () => {
     }, 700);
   }, 1500);
 });
-//The End
 
+//BG
+const canvas = document.getElementById("space");
+const ctx = canvas.getContext("2d");
+
+let stars = [];
+
+function setupCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  stars = [];
+
+  const STAR_COUNT = Math.floor((canvas.width * canvas.height) / 3500);
+
+  for (let i = 0; i < STAR_COUNT; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5,
+      opacity: Math.random(),
+      dx: (Math.random() - 0.5) * 0.4,
+      dy: (Math.random() - 0.5) * 0.4,
+    });
+  }
+}
+
+setupCanvas();
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  stars.forEach((star) => {
+    ctx.beginPath();
+
+    ctx.fillStyle = `rgba(255,255,255,${star.opacity})`;
+
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+
+    ctx.fill();
+
+    // slow floating movement
+    star.x += star.dx;
+    star.y += star.dy;
+
+    // twinkle
+    star.opacity += (Math.random() - 0.5) * 0.02;
+
+    if (star.opacity < 0.2) star.opacity = 0.2;
+    if (star.opacity > 1) star.opacity = 1;
+
+    // wrap around screen
+    if (star.x < 0) star.x = canvas.width;
+    if (star.x > canvas.width) star.x = 0;
+    if (star.y < 0) star.y = canvas.height;
+    if (star.y > canvas.height) star.y = 0;
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize", setupCanvas);
+
+//The End
