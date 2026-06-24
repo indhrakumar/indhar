@@ -186,7 +186,7 @@ function setupCanvas() {
 
   stars = [];
 
-  const STAR_COUNT = Math.floor((canvas.width * canvas.height) / 3500);
+  const STAR_COUNT = Math.floor((canvas.width * canvas.height) / 2500);
 
   for (let i = 0; i < STAR_COUNT; i++) {
     stars.push({
@@ -194,8 +194,8 @@ function setupCanvas() {
       y: Math.random() * canvas.height,
       radius: Math.random() * 1.8,
       opacity: Math.random(),
-      dx: (Math.random() - 0.5) * 0.5,
-      dy: (Math.random() - 0.5) * 0.5,
+      dx: (Math.random() - 0.5) * 0.1,
+      dy: (Math.random() - 0.5) * 0.1,
     });
   }
 }
@@ -222,8 +222,7 @@ function animate() {
     star.y += star.dy;
 
     // twinkle
-    star.opacity += (Math.random() - 0.5) * 0.02;
-
+    star.opacity += (Math.random() - 0.5) * 0.1;
     if (star.opacity < 0.2) star.opacity = 0.2;
     if (star.opacity > 1) star.opacity = 1;
 
