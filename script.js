@@ -108,10 +108,11 @@ logo.addEventListener("click", () => {
 //Typing effect
 let typed = new Typed(".text-animation", {
   strings: [
+    "Aspring MERN Stack Developer",
     "Frontend Developer",
     "FullStack Developer",
+    "Web Developer",
     "Java Developer",
-    "Web Designer",
   ],
   typeSpeed: 80,
   backSpeed: 50,
