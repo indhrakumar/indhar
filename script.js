@@ -128,28 +128,26 @@ const items = education.querySelectorAll(
 );
 
 const observer = new IntersectionObserver(
-  (entries) => {
+  (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // reset
+        // Reset
         items.forEach((item) => {
           item.classList.remove("animate");
         });
 
-        // reflow trick
+        // Reflow
         void education.offsetWidth;
 
-        // animate one by one
+        // Animate one by one
         items.forEach((item, index) => {
           setTimeout(() => {
             item.classList.add("animate");
           }, index * 300);
         });
-      } else {
-        // section veliya pona reset
-        items.forEach((item) => {
-          item.classList.remove("animate");
-        });
+
+        // Animation ஒரே ஒரு தடவை மட்டும்
+        observer.unobserve(entry.target);
       }
     });
   },
@@ -159,21 +157,6 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(education);
-//loading
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-
-  // small delay for smooth feel
-  setTimeout(() => {
-    loader.classList.add("opacity-0");
-
-    document.body.classList.remove("overflow-hidden");
-
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 700);
-  }, 1500);
-});
 
 //BG
 const canvas = document.getElementById("space");
@@ -240,5 +223,25 @@ function animate() {
 animate();
 
 window.addEventListener("resize", setupCanvas);
+// animations
+const observers = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observers.unobserve(entry.target); // ஒரே தடவை animation
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  },
+);
+
+const elements = document.querySelectorAll(
+  ".fade-up, .fade-down, .fade-left, .fade-right, .zoom-in, .zoom-out, .rotate-in, .blur-in",
+);
+
+elements.forEach((element) => observers.observe(element));
 
 //The End

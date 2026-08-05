@@ -208,24 +208,63 @@
         transform: translateY(-5px);
         box-shadow: 0 0 10px cyan;
       }
+      /*intersectionObserver*/
+    
+.fade-up,
+.fade-down,
+.fade-left,
+.fade-right,
+.zoom-in,
+.zoom-out,
+.rotate-in,
+.blur-in {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* Initial States */
+.fade-up {
+  transform: translateY(80px);
+}
+
+.fade-down {
+  transform: translateY(-80px);
+}
+
+.fade-left {
+  transform: translateX(-80px);
+}
+
+.fade-right {
+  transform: translateX(80px);
+}
+
+.zoom-in {
+  transform: scale(0.8);
+}
+
+.zoom-out {
+  transform: scale(1.2);
+}
+
+.rotate-in {
+  transform: rotate(-10deg) scale(0.9);
+}
+
+.blur-in {
+  filter: blur(8px);
+}
+
+/* Active State */
+.show {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) rotate(0);
+  filter: blur(0);
+}
+/*intersectionObserver end*/
     </style>
   </head>
   <body class="bg-black overflow-hidden">
-    <!-- LOADER -->
-    <div
-      id="loader"
-      class="fixed inset-0 z-[9999] bg-black flex items-center justify-center transition-all duration-700">
-      <div class="relative w-[70px] h-[70px]">
-        <!-- spinning ring -->
-        <div
-          class="absolute inset-0 rounded-full border-4 border-cyan-500 border-t-transparent border-b-transparent animate-spin shadow-[0_0_25px_cyan]"></div>
-
-        <!-- center glow -->
-        <div
-          class="absolute inset-[35%] rounded-full bg-cyan-400 shadow-[0_0_40px_cyan] animate-pulse"></div>
-      </div>
-    </div>
-
     <!-- NAVBAR -->
     <header class="fixed top-0 left-0 right-0 z-[9999]">
       <div
@@ -312,7 +351,7 @@
       </div>
     </header>
 
-    <section id="home" class="min-h-screen scroll-mt-[90px] pt-[90px]">
+    <section id="home" class="min-h-screen zoom-out scroll-mt-[90px] pt-[90px]">
       <h2
         class="text-white mt-[10px] text-4xl md:text-5xl lg:text-6xl text-center font-bold p-4"
         style="
@@ -350,7 +389,7 @@
           <div
             class="mt-3 md:mt-1 p-1 flex flex-col gap-1 md:gap-2 text-justify md:text-start">
             <p
-              class="text-gray-400 text-lg md:text-2xl italic leading-[35px] mb-3 md:mb-2 lg:mb-10 md:leading-normal font-semibold tracking-normal">
+              class="text-gray-400  text-lg md:text-2xl italic leading-[35px] mb-3 md:mb-2 lg:mb-10 md:leading-normal font-semibold tracking-normal">
               I'm a passionate fresher Full Stack Developer with skills in
               <span class="text-cyan-300" style="text-shadow: 0 0 10px"
                 >HTML</span
@@ -378,10 +417,10 @@
             </p>
 
             <div
-              class="flex gap-[40px] md:gap-[50px] items-center justify-center md:justify-start my-3 lg:ms-5 lg:mb-10">
+              class="flex fade-up gap-[40px] md:gap-[50px] items-center justify-center md:justify-start my-3 lg:ms-5 lg:mb-10">
               <a href="https://www.instagram.com/_innocent_boy_i17/">
                 <i
-                  class="bi bi-instagram text-cyan-300 bg-black flex text-center px-2 py-2 text-3xl border border-cyan-300 rounded-full hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_cyan] hover:bg-cyan-300 hover:text-black transition-all duration-300"></i>
+                  class="bi bi-instagram  text-cyan-300 bg-black flex text-center px-2 py-2 text-3xl border border-cyan-300 rounded-full hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_cyan] hover:bg-cyan-300 hover:text-black transition-all duration-300"></i>
               </a>
 
               <a href="https://github.com/indhrakumar">
@@ -399,7 +438,7 @@
               </a>
             </div>
             <div
-              class="flex gap-3 lg:gap-6 w-full py-3 mx-auto lg:mx-2 items-center md:justify-start justify-center">
+              class="flex fade-up gap-3 lg:gap-6 w-full py-3 mx-auto lg:mx-2 items-center md:justify-start justify-center">
               <a
                 href="#contact"
                 class="bg-cyan-300 w-2/5 lg:w-1/3 flex items-center justify-center text-black px-4 py-3 text-xl lg:text-xl rounded-full font-semibold hover:text-white shadow-[0_0_15px_cyan] hover:shadow-[0_0_25px_cyan] transition-all duration-300"
@@ -419,7 +458,7 @@
         <div
           class="flex flex-col mt-10 md:mt-5 md:mb-auto md:items-end lg:pe-10 w-full items-center justify-center order-1 md:order-2">
           <div
-            class="mypic shrink-0 h-[300px] w-[300px] rounded-full bg-gray-400 md:w-[280px] md:h-[280px] lg:w-[450px] lg:h-[450px] overflow-hidden">
+            class="mypic zoom-in shrink-0 h-[300px] w-[300px] rounded-full bg-gray-400 md:w-[280px] md:h-[280px] lg:w-[450px] lg:h-[450px] overflow-hidden">
             <img
               src="image/indhar.jpg"
               alt="Indhra Kumar"
@@ -450,7 +489,7 @@
       id="education"
       class="min-h-screen mt-[90px] scroll-mt-[90px] px-5">
       <h2
-        class="text-white mt-[10px] text-4xl md:text-6xl text-center font-bold p-4"
+        class="text-white fade-up mt-[10px] text-4xl md:text-6xl text-center font-bold p-4"
         style="text-shadow: 0 0 10px">
         My
         <span class="text-green-500" style="text-shadow: 0 0 10px"
@@ -567,7 +606,7 @@
     </div> -->
     <section
       id="skills"
-      class="min-h-screen bg-transparent pt-[90px] px-5 pb-14 text-white">
+      class="min-h-screen blur-in bg-transparent pt-[90px] px-5 pb-14 text-white">
       <!-- HEADING -->
       <div class="mx-auto max-w-7xl">
         <div class="text-center">
@@ -628,7 +667,7 @@
         <div class="mt-16 flex flex-col gap-4">
           <!-- FRONTEND -->
           <div
-            class="skill-category bg-transparent rounded-3xl p-3"
+            class="skill-category bg-transparent fade-up rounded-3xl p-3"
             data-category="frontend">
             <h3
               class="mb-6 text-3xl font-bold text-teal-400"
@@ -794,7 +833,7 @@
           </div>
 
           <!-- Language -->
-          <div class="skill-category" data-category="languages">
+          <div class="skill-category fade-up" data-category="languages">
             <h3
               class="mb-6 text-3xl font-bold text-amber-500"
               style="text-shadow: 0 0 10px">
@@ -871,7 +910,7 @@
             </div>
           </div>
           <!-- BACKEND -->
-          <div class="skill-category" data-category="backend">
+          <div class="skill-category fade-up" data-category="backend">
             <h3
               class="mb-6 text-3xl font-bold text-cyan-200"
               style="text-shadow: 0 0 10px">
@@ -928,7 +967,7 @@
             </div>
           </div>
           <!-- DATABASE -->
-          <div class="skill-category" data-category="database">
+          <div class="skill-category fade-up" data-category="database">
             <h3
               class="mb-6 text-3xl font-bold text-green-400"
               style="text-shadow: 0 0 10px">
@@ -985,7 +1024,7 @@
             </div>
           </div>
           <!-- Tools -->
-          <div class="skill-category" data-category="tools">
+          <div class="skill-category fade-up" data-category="tools">
             <h3
               class="mb-6 text-3xl font-bold text-white"
               style="text-shadow: 0 0 10px">
@@ -1094,10 +1133,10 @@
     </div> -->
     <section
       id="Smallprojects"
-      class="min-h-screen bg-transparent pt-[90px] px-5 pb-14 text-white">
+      class="min-h-screen bg-transparent  pt-[90px] px-5 pb-14 text-white">
       <!-- HEADING -->
       <div class="mx-auto max-w-7xl">
-        <div class="text-center">
+        <div class="text-center zoom-out">
           <h2
             class="text-4xl font-bold md:text-6xl text-white"
             style="text-shadow: 0 0 10px">
@@ -1114,7 +1153,7 @@
             <div class="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch">
               <!-- Card-weather-app -->
               <a href="https://indhrakumar.github.io/weather-api"
-                class="card flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
+                class="card zoom-out flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
                 <h1 class="text-center text-2xl mb-3 font-bold text-amber-300" style="text-shadow: 0 0 10px">Weather App</h1>
                 <div class="flex gap-4 h-full">
                   <div class="w-1/3 lg:w-1/2 h-full flex item-center justify-center overflow-hidden">
@@ -1175,7 +1214,7 @@
                 </a>
                 <!-- Card-loan tracker -->
                  <a href="https://indhrakumar.github.io/loan-tracker"
-                class="card flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
+                class="card zoom-out flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
                 <h1 class="text-center text-2xl mb-3 font-bold text-amber-300"style="text-shadow: 0 0 10px">Loan Tracker</h1>
                 <div class="flex gap-4 h-full">
                   <div class="w-1/3 lg:w-1/2 h-full flex item-center justify-center overflow-hidden">
@@ -1236,7 +1275,7 @@
                 </a>
                  <!-- Card-QR code generator -->
                  <a href="https://indhrakumar.github.io/QR-code-generator"
-                class="card flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
+                class="card zoom-out flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
                 <h1 class="text-center text-2xl mb-3 font-bold text-amber-300" style="text-shadow: 0 0 10px">QR code Generator</h1>
                 <div class="flex gap-4 h-full">
                   <div class="w-1/3 lg:w-1/2 h-full flex item-center justify-center overflow-hidden">
@@ -1311,7 +1350,7 @@
                 </a>
                  <!-- Card-meal explorer -->
                  <a href="https://indhrakumar.github.io/meal-api"
-                class="card flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
+                class="card zoom-out flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
                 <h1 class="text-center text-2xl mb-3 font-bold text-amber-300" style="text-shadow: 0 0 10px">Meal Explorer API</h1>
                 <div class="flex gap-4 h-full">
                   <div class="w-1/3 lg:w-1/2 h-full flex item-center justify-center overflow-hidden">
@@ -1372,7 +1411,7 @@
                 </a>
                  <!-- Card-todo -->
                  <a href="https://indhrakumar.github.io/To-Do"
-                class="card flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
+                class="card zoom-out flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
                 <h1 class="text-center text-2xl mb-3 font-bold text-amber-300" style="text-shadow: 0 0 10px">Todo-App</h1>
                 <div class="flex gap-4 h-full">
                   <div class="w-1/3 lg:w-1/2 h-full flex item-center justify-center overflow-hidden">
@@ -1433,7 +1472,7 @@
                 </a>
                 <!-- Card-Shopping-->
                  <a href="https://indhrakumar.github.io/Shopping-Cart/"
-                class="card flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
+                class="card zoom-out flex flex-col justify-start rounded-2xl italic border border-white/10 bg-white/5 backdrop-blur-[2px] px-5 py-2 min-h-[230px] overflow-hidden">
                 <h1 class="text-center text-2xl mb-3 font-bold text-amber-300" style="text-shadow: 0 0 10px">Shopping Cart</h1>
                 <div class="flex gap-4 h-full">
                   <div class="w-1/3 lg:w-1/2 h-full flex item-center justify-center overflow-hidden">
